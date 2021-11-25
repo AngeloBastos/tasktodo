@@ -47,6 +47,10 @@ public class TouchHelper extends ItemTouchHelper.SimpleCallback {
                             adapter.notifyItemChanged(position);
                         }
                     });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        } else  {
+            adapter.editTask(position);
         }
     }
 
